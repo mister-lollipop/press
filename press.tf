@@ -13,9 +13,9 @@ provider "aws" {
   region     = "us-east-1" 
 }
 resource "aws_instance" "instance" {
-  ami                         = "ami-00f251754ac5da7f0"
+  ami                         = "ami-0175bdd48fdb0973b"
   instance_type               = "t2.medium"
-  key_name                    = "yash"
+  key_name                    = "keypair"
   vpc_security_group_ids      = [aws_security_group.securitygroup1.id]
   associate_public_ip_address = true
   user_data                   = file("data.sh")
